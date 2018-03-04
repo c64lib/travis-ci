@@ -8,9 +8,7 @@ then
 fi
 
 # Download Commodities
-wget --quiet http://www.theweb.dk/KickAssembler/KickAssembler.zip
-unzip -uoqq KickAssembler.zip KickAss.jar -d $COMMODITIES_DIR
-rm KickAssembler.zip
+wget --quiet -P $COMMODITIES_DIR https://github.com/c64lib/asm-ka/releases/download/4.19/KickAss.jar
 
 # Provide Bash functions to travis-ci environment
 
