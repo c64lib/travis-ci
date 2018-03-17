@@ -8,7 +8,7 @@ then
 	mkdir $COMMODITIES_DIR
 fi
 
-# Download Commodities
+# Download Kickassembler
 wget --quiet -P $COMMODITIES_DIR https://github.com/c64lib/asm-ka/releases/download/4.19/KickAss.jar
 
 # Provide Bash functions to travis-ci environment
@@ -20,6 +20,7 @@ function ka()
 	java -jar $COMMODITIES_DIR/KickAss.jar "$@"
 }
 
+# CBM Package Manager ;-)
 function cpm()
 {
 	if [[ !( -d $CPM_MODULES_DIR ) ]]
