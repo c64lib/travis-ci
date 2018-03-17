@@ -26,7 +26,8 @@ function cpm()
 	then
 		mkdir $CPM_MODULES_DIR
 	fi
+	mkdir $CPM_MODULES_DIR/$1
 	
-	echo "Installing $1..."
-	wget -qO - $1 | tar xvz -C $CPM_MODULES_DIR
+	echo "Installing $1 from $2..."
+	wget -qO - $2 | tar xvz -C $CPM_MODULES_DIR/$1 --strip-components=1
 }
