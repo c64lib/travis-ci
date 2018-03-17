@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COMMODITIES_DIR=.cbm
-CBM_MODULES_DIR=cbm_modules
+CPM_MODULES_DIR=cpm_modules
 
 if [[ !( -d $COMMODITIES_DIR ) ]]
 then
@@ -22,11 +22,11 @@ function ka()
 
 function cpm()
 {
-	if [[ !( -d $CBM_MODULES_DIR ) ]]
+	if [[ !( -d $CPM_MODULES_DIR ) ]]
 	then
-		mkdir $CBM_MODULES_DIR
+		mkdir $CPM_MODULES_DIR
 	fi
 	
 	echo "Installing $1..."
-	wget -qO - $1 | tar xvz -C $CBM_MODULES_DIR
+	wget -qO - $1 | tar xvz -C $CPM_MODULES_DIR
 }
