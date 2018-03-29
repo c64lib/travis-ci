@@ -42,23 +42,10 @@ ka -libdir cpm_modules <file.asm>
 This one will automatically include all libraries installed in `cpm_modules` in assembling process. Please note that currently `cpm` command works only under linux (should work with CygWin as well, although I haven't tested it yet).
 
 # Examples
-## Installation of framework
-Your travis config file should look similar to the following:
-```yaml
-language: asm
-sudo: false
-before_install:
-  - source <(curl -SLs https://raw.githubusercontent.com/c64lib/travis-ci/master/install.sh)
-script:
-  - ka vic2.asm
-notifications:
-  email:
-    on_success: change
-    on_failure: change
-```
-
-## Using external libraries via dependency management
+## Installation of framework and external libraries
 In following example we are building `test.asm` file that includes three libraries: `common`, `vic2` and `cia`. This example is real and you can find it in https://github.com/c64lib/test repository.
+
+Your travis config file should look similar to the following:
 ```yaml
 language: asm
 sudo: false
@@ -74,3 +61,5 @@ email:
     on_success: change
     on_failure: change
 ```
+
+For given example repository a travis build is configured and can be reviewed: https://travis-ci.org/c64lib/test/builds
