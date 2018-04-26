@@ -51,15 +51,14 @@ language: asm
 sudo: false
 before_install:
   - source <(curl -SLs https://raw.githubusercontent.com/c64lib/travis-ci/master/install.sh)
- script:
-  - cpm common https://github.com/c64lib/common/archive/0.0.1.tar.gz
-  - cpm vic2 https://github.com/c64lib/vic2/archive/0.0.3.tar.gz
-  - cpm cia https://github.com/c64lib/cia/archive/0.0.2.tar.gz
+script:
+  - cpm common https://github.com/c64lib/common/archive/develop.tar.gz
+  - cpm chipset https://github.com/c64lib/chipset/archive/develop.tar.gz
   - ka -libdir cpm_modules test.asm
 notifications:
-email:
-    on_success: change
-    on_failure: change
+  email:
+     on_success: change
+     on_error: change
 ```
 
 For given example repository a travis build is configured and can be reviewed: https://travis-ci.org/c64lib/test/builds
