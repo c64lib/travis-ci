@@ -21,11 +21,11 @@ function ka()
 }
 
 # build all asm sources in given directory
-function ka_all()
+function kall()
 {
 	for f in $1/*.asm
 	do 
-		ka -libdir cpm_modules $f
+		ka -libdir $CPM_MODULES_DIR $f
 	done
 }
 
