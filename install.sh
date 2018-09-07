@@ -20,6 +20,15 @@ function ka()
 	java -jar $COMMODITIES_DIR/KickAss.jar "$@"
 }
 
+# build all asm sources in given directory
+function ka_all()
+{
+	for f in $1/*.asm
+	do 
+		ka -libdir cpm_modules $f
+	done
+}
+
 # CBM Package Manager ;-)
 function cpm()
 {
