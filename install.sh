@@ -9,7 +9,7 @@ then
 fi
 
 # Download Kickassembler
-wget --quiet -P $COMMODITIES_DIR https://github.com/c64lib/asm-ka/releases/download/4.19/KickAss.jar
+wget --quiet -P $COMMODITIES_DIR https://github.com/c64lib/asm-ka/releases/download/5.0/KickAss.jar
 
 # Provide Bash functions to travis-ci environment
 
